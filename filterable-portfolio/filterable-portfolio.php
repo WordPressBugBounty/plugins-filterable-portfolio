@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name:         Filterable Portfolio
- * Plugin URI:          https://github.com/majeedraza1/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
+ * Plugin URI:          https://majeedraza.me/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Description:         A WordPress plugin to display portfolio images with filtering.
- * Version:             1.6.4
- * Author:              Majeed Raza
- * Author URI:          https://github.com/majeedraza1/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
+ * Version:             1.6.5
+ * Author:              Sayful Islam
+ * Author URI:          https://majeedraza.me/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
  * License:             GPLv3
  * License URI:         https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:         filterable-portfolio
  * Domain Path:         /languages
  * Requires at least:   6.0
- * Tested up to:        6.5
+ * Tested up to:        6.8
  * Requires PHP:        7.0
  */
 
@@ -46,7 +46,7 @@ if ( ! class_exists( 'Filterable_Portfolio' ) ) {
 		 *
 		 * @var string
 		 */
-		private $version = '1.6.4';
+		private $version = '1.6.5';
 
 		/**
 		 * Instance of this class
@@ -222,6 +222,7 @@ if ( ! class_exists( 'Filterable_Portfolio' ) ) {
 		public function admin_footer_text( $text ) {
 			global $post_type, $hook_suffix;
 
+			/* translators: 1: strong html tag start, 2: strong html tag end */
 			$footer_text = sprintf( __( 'If you like %1$s Filterable Portfolio %2$s please leave us a %3$s rating. A huge thanks in advance!',
 				'filterable-portfolio' ), '<strong>', '</strong>',
 				'<a href="https://wordpress.org/support/view/plugin-reviews/filterable-portfolio?filter=5#postform" target="_blank" data-rated="Thanks :)">&starf;&starf;&starf;&starf;&starf;</a>' );
